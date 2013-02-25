@@ -113,10 +113,16 @@ class Vector2D(Vector):
         Use Super's constructor and add x, y variables for easy access
         """
         Vector.__init__(self, x, y)
-
+        
+        #works with python magic
+        self.x = x
+        self.y = y
     #Accessors/Mutators#
 
     def __getattribute__(self, name):
+        """
+        Some python magic to pull the x and y values from position
+        """
         if name == 'x':
             return object.__getattribute__(self, 'position')[0]
         elif name == 'y':
@@ -125,13 +131,18 @@ class Vector2D(Vector):
             return object.__getattribute__(self, name)
 
     def __setattr__(self, name, value):
+        """
+        More python magic to have attribute setting to position
+        """
         if name == 'x':
             old = self.position
             old[0] = value
+            object.__setattr__(self, 'x', None)
             object.__setattr__(self, 'position', old)
         elif name == 'y':
             old = self.position
             old[1] = value
+            object.__setattr__(self, 'y', None)
             object.__setattr__(self, 'position', old)
         else:
             object.__setattr__(self, name, value)
@@ -139,32 +150,46 @@ class Vector2D(Vector):
 class Vector3D(Vector):
     def __init__(self, x, y, z):
         Vector.__init__(self, x, y, z)
+        
+        #works with python magic methods
         self.x = x
         self.y = y
         self.z = z
-
     #Accessors and Mutators#
 
-    def getX(self):
+    def __getattribute__(self, name):
         """
-        returns value of x
+        Some python magic to pull the x, y, and z values from position
         """
-        return self.x
+        if name == 'x':
+            return object.__getattribute__(self, 'position')[0]
+        elif name == 'y':
+            return object.__getattribute__(self, 'position')[1]
+        elif name == 'z':
+            return object.__getattribute__(self, 'position')[2]
+        else:
+            return object.__getattribute__(self, name)
 
-    def getY(self):
+    def __setattr__(self, name, value):
         """
-        return value of y
+        More Python magic to set x, y, z from IE Vector3D.x to position
         """
-        return self.y
-    
-    def getZ(self):
-        """
-        return value of z
-        """
-        return self.z
+        if name == 'x':
+            old = self.position
+            old[0] = value
+            object.__setattr__(self, 'x', None)
+            object.__setattr__(self, 'position', old)
+        elif name == 'y':
+            old = self.position
+            old[1] = value
+            object.__setattr__(self, 'y', None)
+            object.__setattr__(self, 'position', old)
+        elif name == 'z':
+            old = self.position
+            old[2] = value
+            object.__setattr__(self, 'z', None)
+            object.__setattr__(self, 'position', old)
+        else:
+            object.__setattr__(self, name, value)
 
-    def setX(self):
-        """
-        sets the value of z
-        """
-        self.set
+
