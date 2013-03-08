@@ -11,6 +11,8 @@ with a simpler code base composed of pure python, and an API that
 lends itself to further exploration with [numpy](http://numpy.org) and
 [matplotlib](http://matplotlib.org).
 
+Question? Find our irc channel #physical-python
+
 Shortcomings of VPython we would like to address
 ------------------------------------------------
 
