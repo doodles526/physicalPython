@@ -37,3 +37,9 @@ Features we would like to add beyond those in VPython
    adjust a spring that is attached to that ball.
 
 3. We would like to have a matplotlib-like API for 2D plotting.
+
+
+Update:  The physicalPython project is still in progress; however,
+         current research is being focused on collecting data on how
+         to improve vPython before any major coding happens.  Coding 
+         should begin again this Summer.
