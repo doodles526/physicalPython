@@ -23,6 +23,11 @@ Shortcomings of VPython we would like to address
 
 3. VPython has very poor support for linux.
 
+4. The trail function breaks the rule that students should only worry about
+   physics in their programs.
+
+5. Error messages can be cryptic, and unintelligible.
+
 Features we would like to add beyond those in VPython
 -----------------------------------------------------
 
@@ -35,3 +40,9 @@ Features we would like to add beyond those in VPython
    adjust a spring that is attached to that ball.
 
 3. We would like to have a matplotlib-like API for 2D plotting.
+
+4. Functions to write images and animations to file for later viewing.
+
+5. We want the ability to have ghost trails for objects.
+
+6. It would be nice to have the ability to specify window resolution.
