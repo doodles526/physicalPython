@@ -11,6 +11,8 @@ with a simpler code base composed of pure python, and an API that
 lends itself to further exploration with [numpy](http://numpy.org) and
 [matplotlib](http://matplotlib.org).
 
+Question? Find our irc channel #physical-python
+
 Shortcomings of VPython we would like to address
 ------------------------------------------------
 
@@ -46,3 +48,8 @@ Features we would like to add beyond those in VPython
 5. We want the ability to have ghost trails for objects.
 
 6. It would be nice to have the ability to specify window resolution.
+
+Update:  The physicalPython project is still in progress; however,
+         current research is being focused on collecting data on how
+         to improve vPython before any major coding happens.  Coding 
+         should begin again this Summer.

@@ -1,3 +1,5 @@
+from vector import Vector, Vector2D, Vector3D
+
 class Shape():
     """
     Base shape class for physicalPython
